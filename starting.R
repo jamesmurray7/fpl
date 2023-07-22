@@ -41,9 +41,3 @@ fdrfixtures %>%
   scale_fill_gradient2(guide=F,low="#00FF87",mid="#D6DCD8",high="#7F002D",midpoint=median(fdrfixtures$fdr)) # creating a gradient colour-coding that spans from toughest FDR ranking (coloured red) to easiest (coloured green)
 
 
-# Looking at player info --------------------------------------------------
-pl <- get_player_info() # start of this season
-pl22 <- read.csv("~/Downloads/cleaned_players.csv") # End of last season (from https://github.com/vaastav/Fantasy-Premier-League/blob/master/data/2022-23/cleaned_players.csv)
-
-pl22 %>% glimpse()
-pl22 %>% arrange(-selected_by_percent) %>% slice(1:10)
